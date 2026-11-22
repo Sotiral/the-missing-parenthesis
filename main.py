@@ -51,4 +51,3 @@ for attempts in range(3):
     else:
         print("Incorrect. You have no attempts left. The monster catches you and you lose.")
 
-    
