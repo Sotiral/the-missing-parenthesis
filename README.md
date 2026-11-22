@@ -5,7 +5,19 @@ Project started on 11/21/26 by Sotiral for HackClub.
 
 # To do: 
 
-- Add a screen UI
-- Add a JSON (local) save.
+## JSON SAVES (PRIORITY -)
+
+**MUST:**
+
+- Save the game automatically every new action.
+- Save: SETTINGS - CURRENT / BEST SCORE - LEVLE - LEVEL DIFF
+
+## MAIN MENU (PRIORITY +++)
+
+- Settings, play, close
+- LOAD ASSETS SO ITS SMOOTH DURING GAMEPLAY
+
+
+
 
 ALL RIGHTS DESERVED
