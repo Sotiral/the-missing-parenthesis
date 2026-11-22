@@ -1,3 +1,10 @@
 import pygame
+import time
 
-print(pygame.version.ver)
+print(pygame.version.rev) #confirms pygame ce
+
+pygame.init()
+screen = pygame.display.set_mode((1280, 720))
+clock = pygame.time.Clock() #main stuff
+running = True
+
