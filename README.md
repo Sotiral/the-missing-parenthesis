@@ -21,3 +21,5 @@ Project started on 11/21/26 by Sotiral for HackClub.
 
 
 ALL RIGHTS DESERVED
+
+SOTI WAS HERE 11:00 
