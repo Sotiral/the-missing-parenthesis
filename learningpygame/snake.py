@@ -8,10 +8,11 @@ cell = 30
 cols = int(widht / 1.5) // cell
 rows = int(height / 1.5) // cell
 pygame.display.set_caption("HELLO MISTERM SNAKIES")
-
 screen = pygame.display.set_mode((cols * cell, rows * cell))
 widht, height = screen.get_size()
 clock = pygame.time.Clock()
+icon = pygame.image.load("art/doggie.jpg").convert()
+pygame.display.set_icon(icon) #fucks sakes
 running = True
 
 snake = [(cols // 2, rows // 2)]
@@ -19,6 +20,8 @@ dx ,dy = 1, 0
 apple = (randint(0, cols -1), randint(0, rows - 1))
 score = 0
 
+
+#run forest run
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
