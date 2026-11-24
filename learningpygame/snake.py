@@ -1,5 +1,6 @@
 import pygame
 from random import randint
+import time
 
 #declaration of independeace
 pygame.init()
@@ -19,6 +20,10 @@ snake = [(cols // 2, rows // 2)]
 dx ,dy = 1, 0
 apple = (randint(0, cols -1), randint(0, rows - 1))
 score = 0
+
+print("Hello there! Please select your speed:")
+time.sleep(2)
+speed = int(input("(GIVE ME A NUMBER) The number one (1) for slow, number two for mid, number three for fast: "))
 
 
 #run forest run
@@ -55,6 +60,14 @@ while running:
         pygame.draw.rect(screen, (220, 0, 0), (part[0] * cell, part[1] * cell, cell, cell))
 
     pygame.display.flip()
-    clock.tick(10)
 
+    if speed == 1:
+        clock.tick(5)
+    elif speed == 2:
+        clock.tick(10)
+    elif speed == 3:
+        clock.tick(15)
+    else:
+        print("NUMBER ONLY")
+ 
 pygame.quit()
