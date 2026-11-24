@@ -17,7 +17,7 @@ running = True
 snake = [(cols // 2, rows // 2)]
 dx ,dy = 1, 0
 apple = (randint(0, cols -1), randint(0, rows - 1))
-score = 67
+score = 0
 
 while running:
     for event in pygame.event.get():
@@ -32,7 +32,7 @@ while running:
                 dx, dy = -1, 0
             elif event.key == pygame.K_d:
                 dx, dy = 1, 0
-    head = (snake[0][0], +dx, snake[0][1] + dy)
+    head = (snake[0][0] +dx, snake[0][1] + dy)
 
     if head[0] < 0 or head[0] >= cols or head[1] < 0 or head[1] >= rows or head in snake:
         running = False
@@ -41,7 +41,7 @@ while running:
 
     if head == apple:
         score += 1
-        apple = (randint(0, cols -1), randint(0, rows -2))
+        apple = (randint(0, cols -1), randint(0, rows -1))
     else:
         snake.pop()
 
