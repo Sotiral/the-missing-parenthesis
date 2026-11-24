@@ -2,28 +2,33 @@ import pygame
 from random import randint
 import time
 
+# SPEED
+print("Hello there! Please select your speed :3")
+time.sleep(0.8)
+speed = int(input("(GIVE ME A NUMBER) The number one (1) for slow, number two for mid, number three for fast: "))
+
 #declaration of independeace
 pygame.init()
 widht, height = pygame.display.get_desktop_sizes()[0]
 cell = 30
 cols = int(widht / 1.5) // cell
 rows = int(height / 1.5) // cell
-pygame.display.set_caption("HELLO MISTERM SNAKIES")
+pygame.display.set_caption("Snake")
 screen = pygame.display.set_mode((cols * cell, rows * cell))
 widht, height = screen.get_size()
 clock = pygame.time.Clock()
 icon = pygame.image.load("art/doggie.jpg").convert()
-pygame.display.set_icon(icon) #fucks sakes
-running = True
+pygame.display.set_icon(icon)
 
 snake = [(cols // 2, rows // 2)]
 dx ,dy = 1, 0
 apple = (randint(0, cols -1), randint(0, rows - 1))
 score = 0
 
-print("Hello there! Please select your speed:")
-time.sleep(2)
-speed = int(input("(GIVE ME A NUMBER) The number one (1) for slow, number two for mid, number three for fast: "))
+time.sleep(0.5)
+
+running = True
+
 
 
 #run forest run
@@ -44,7 +49,7 @@ while running:
 
     if head[0] < 0 or head[0] >= cols or head[1] < 0 or head[1] >= rows or head in snake:
         running = False
-        print("Get rekt " + str(score) )
+        print("Get rekt!!! SCORE:", score) #im stupid I could have used {score}, or , score instead of converting it into a string in older versions
     snake.insert(0, head)
 
     if head == apple:
