@@ -36,7 +36,7 @@ while running:
 
     if head[0] < 0 or head[0] >= cols or head[1] < 0 or head[1] >= rows or head in snake:
         running = False
-        print("Get rekt " + score )
+        print("Get rekt " + str(score) )
     snake.insert(0, head)
 
     if head == apple:
@@ -52,6 +52,6 @@ while running:
         pygame.draw.rect(screen, (220, 0, 0), (part[0] * cell, part[1] * cell, cell, cell))
 
     pygame.display.flip()
-    clock.tick(60)
+    clock.tick(10)
 
 pygame.quit()
