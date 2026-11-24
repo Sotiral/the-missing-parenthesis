@@ -42,7 +42,7 @@ while running:
     if head == apple:
         score += 1
         apple = (randint(0, cols -1), randint(0, rows -2))
-    else
+    else:
         snake.pop()
 
     screen.fill((67, 67, 67))
