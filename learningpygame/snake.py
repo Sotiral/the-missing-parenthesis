@@ -3,9 +3,11 @@ from random import randint
 import time
 
 # SPEED
-print("Hello there! Please select your speed :3")
-time.sleep(0.8)
-speed = int(input("(GIVE ME A NUMBER) The number one (1) for slow, number two for mid, number three for fast: "))
+print("Hello there! This is Snake, please confirm the following:")
+time.sleep(0.3)
+print("Speed -> how fast your snake moves. Select (1) for SLOW (2) for NORMAL (3) for FAST")
+time.sleep(0.3)
+speed = int(input("SELECTION: "))
 
 #declaration of independeace
 pygame.init()
@@ -58,7 +60,7 @@ while running:
     else:
         snake.pop()
 
-    screen.fill((67, 67, 67))
+    screen.fill((128, 4, 230))
     pygame.draw.rect(screen, (0, 200, 0), (apple[0] * cell, apple[1] * cell, cell, cell))
 
     for part in snake:
@@ -73,6 +75,6 @@ while running:
     elif speed == 3:
         clock.tick(15)
     else:
-        print("NUMBER ONLY")
+        print("1 / 2 / 3")
  
 pygame.quit()
